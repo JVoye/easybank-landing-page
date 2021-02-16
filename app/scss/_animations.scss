@@ -1,0 +1,37 @@
+.fade {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fade-in { // DISPLAY PROPERTIES CAN'T BE ANIMATED BUT VISIBILITY CAN!
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+   
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in .2s ease-in-out forwards;
+}
+
+
+@keyframes fade-out{
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fade-out .2s ease-in-out forwards;
+}

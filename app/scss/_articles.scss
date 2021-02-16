@@ -1,0 +1,87 @@
+.articles {
+    background-color: $veryLightGray;
+    padding: 7rem 0;
+
+    @include breakpoint-up(medium){
+        padding: 10rem 0 8rem 0; 
+    }
+
+    h2 {
+        padding-bottom: 1rem;
+    }
+    
+    @include breakpoint-up(medium){
+        h2 {
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+.article {
+
+    &__grid {
+        display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        
+        @include breakpoint-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large){
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        background-color: $white;
+        border-radius: .5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: all .2s ease-in-out;
+
+        &:hover {
+           transform: scale(1.05);
+        }
+    }
+
+    &__image {
+        height: 20rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__text {
+        padding: 3rem 3rem 3rem 3rem;
+        color: $grayishBlue;
+
+        @include breakpoint-up(medium){
+            padding: 2.25rem 2.25rem 1.5rem 2.25rem;
+        }
+
+    }
+
+    &__author {
+        font-size: 1rem;
+    }
+
+    &__title {
+        color: $darkBlue;
+        font-size: $font-med;
+        font-weight: 500;
+
+         p {
+            line-height: 1.2;
+        }
+    }
+
+    &__description {
+        font-size: $font-xs;
+
+        p {
+            line-height: 1.5;
+        }
+    }
+}

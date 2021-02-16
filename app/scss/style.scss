@@ -1,0 +1,11 @@
+@import "variables"; // NEEDS TO BE FIRST! //
+@import "mixins"; 
+@import "animations";
+
+@import "globals";
+@import "header";
+@import "hero";
+@import "feature";
+@import "articles";
+@import "footer";
+
